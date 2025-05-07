@@ -66,6 +66,34 @@ a {
   color: $linkColor;
   text-decoration: none;
   outline: none;
+  position: relative;
+
+  &.bold {
+    &::after {
+      height: 3px;
+    }
+  }
+
+  &.off-hover {
+    &::after {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Располагаем линию чуть ниже текста */
+    width: 0;
+    height: 1px;
+    background-color: #fff; /* Цвет подчёркивания */
+    transition: width .4s ease; /* Плавное увеличение ширины */
+  }
+
+  &:hover::after {
+    width: 100%; /* При ховере растягиваем линию */
+  }
 }
 
 img {

@@ -93,4 +93,28 @@ $( document ).ready(function() {
       })
     });
   }
+
+  new Splide( '.popular-slider',  {
+    perPage: 3,
+    gap: 8,
+    pagination: false
+  }).mount();
+
+  new Splide( '.category-slider',  {
+    perPage: 3,
+    gap: 8,
+    pagination: false
+  }).mount();
+
+  new Splide( '.trust-slider',  {
+    perPage: 4,
+    gap: -1,
+    pagination: false,
+    arrows: false,
+    drag: false,
+
+    // grid: {
+    //   rows: 2,
+    // },
+  }).mount();
 });
