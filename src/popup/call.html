@@ -1,0 +1,163 @@
+<div class="ui-popup mfp-anim">
+  <div class="call-popup">
+    <div class="ui-popup-title">Обратный звонок</div>
+
+    <div class="ui-popup-body">
+      <form action="#" class="ui-popup-validate">
+        <div class="ui-fields">
+          <div class="ui-field">
+            <input type="text" class="ui-input label" name="name" id="name">
+            <label class="ui-label">Ваше имя*</label>
+          </div>
+          <div class="ui-field">
+            <input type="text" class="ui-input label phone-mask"  name="phone" id="phone">
+            <label class="ui-label">Телефон*</label>
+          </div>
+          <div class="ui-field">
+            <textarea id="textbox" name="textbox" class="ui-input label" rows="4"></textarea>
+            <label class="ui-label">Примечание</label>
+          </div>
+          <div class="ui-field">
+            <input type="text" class="ui-input label" name="captcha" id="captcha">
+            <label class="ui-label">Введите слово на картинке*</label>
+          </div>
+        </div>
+
+        <button class="ui-btn red">Отправить</button>
+
+        <div class="ui-checkbox">
+          <input autocomplete="off" type="checkbox" class="ui-checkbox-input" checked="" name="confidentiality" id="confidentiality">
+          <label for="confidentiality" class="ui-checkbox-label">
+            <span class="default-txt">
+              Нажимая на кнопку вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>.
+            </span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      const inpunts = document.querySelectorAll('.ui-input.label')
+
+      inpunts.forEach(element => {
+        element.addEventListener('focus', (e) => {
+          const parent = e.target.closest('.ui-field')
+          const label = parent.querySelector('.ui-label')
+
+          label.classList.add('active')
+
+
+          if(element.value === '') {
+            label.classList.add('active')
+            element.classList.add('active')
+          }
+        })
+
+        element.addEventListener('blur', (e) => {
+          const parent = e.target.closest('.ui-field')
+          const label = parent.querySelector('.ui-label')
+
+          label.classList.remove('active')
+
+          if(element.value !== '') {
+            label.classList.add('active')
+            element.classList.add('active')
+          } else {
+            label.classList.remove('active')
+            element.classList.remove('active')
+          }
+        })
+      })
+
+      let phone = document.querySelectorAll('.phone-mask')
+
+      if(phone.length) {
+        phone.forEach(element => {
+          IMask(element, {
+            mask: [
+              {
+                mask: '+{375} (00) 000 00 00',
+                startsWith: '375',
+                overwrite: true,
+                lazy: false,
+                placeholderChar: '_',
+              },
+              {
+                mask: '+{7} (000) 000 00 00',
+                startsWith: '7',
+                overwrite: true,
+                lazy: false,
+                placeholderChar: '_',
+              },
+              {
+                mask: '+0000000000000',
+                startsWith: '',
+                country: 'unknown'
+              }
+            ],
+
+            dispatch: function (appended, dynamicMasked) {
+              var number = (dynamicMasked.value + appended).replace(/\D/g, '');
+
+              return dynamicMasked.compiledMasks.find(function (m) {
+                return number.indexOf(m.startsWith) === 0;
+              });
+            }
+          })
+        });
+      }
+
+      $(".ui-popup-validate").validate({
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true,
+          },
+          phone: {
+            required: true,
+            phone: true,
+          },
+          captcha: {
+            required: true,
+          },
+          confidentiality: {
+            required: true,
+          }
+        },
+
+        errorPlacement: function(error, element) {
+          const label = element.siblings("label");
+          if (label.length) {
+            label.addClass("error");
+          } else {
+            error.insertAfter(element);
+          }
+        },
+
+        success: function(label, element) {
+          const labelRemove = $(element).siblings("label");
+          if (labelRemove.length) {
+            labelRemove.removeClass("error");
+          }
+        }
+
+        // messages: {
+        //   email: {
+        //     required: "Пожалуйста, введите данные",
+        //     email: "Введите корректный email",
+        //   },
+        //   password: {
+        //     required: "Пожалуйста, введите данные",
+        //     minlength: "Минимальная длина - 8 символов",
+        //   },
+        // }
+      });
+    });
+  </script>
+
+  <div class="mfp-close">
+    <img src="./images/close-popup.svg" alt="">
+  </div>
+</div>

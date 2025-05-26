@@ -13,6 +13,10 @@
 
 .mfp-removing.mfp-bg { opacity: 0; }
 
+.ui-padding {
+  padding-top: 64px;
+}
+
 .mfp-wrap {
   position: fixed!important;
   top: 0!important;
@@ -24,6 +28,110 @@
   position: fixed!important;
   top: 0!important;
   height: 100%!important;
+}
+
+.ui-container {
+  padding: 0 40px;
+}
+
+.ui-page-header {
+  padding: 50px 40px;
+  background-color: #fff;
+
+  &.black {
+    background-color: #000;
+
+    .ui-title {
+      color: #fff;
+    }
+
+    .ui-breadcrumbs {
+      &-link {
+        color: #878B95;
+
+        &::after {
+          color: #fff;
+        }
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ui-breadcrumbs {
+  margin-bottom: 50px;
+
+  &-link {
+    color: #878B95;
+    padding-right: 28px;
+    transition: opacity .2s ease-in-out;
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "/";
+      margin-left: 10px;
+      margin-right: 10px;
+      position: absolute;
+      color: #121317;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #121317;
+  }
+}
+
+.ui-wrapper {
+  padding: 110px 30px;
+  margin: 0 10px;
+}
+
+.ui-pagination {
+  text-align: center;
+
+  &-links {
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 5px;
+    transition: border-color .2s ease-in-out, color .2s ease-in-out;
+    color: #878B95;
+
+    &:hover {
+      // border-color: #161515;
+      color: #161515;
+    }
+
+    &.current {
+      color: #121317;
+      border-color: #121317;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .ui-btn {
@@ -42,21 +150,30 @@
   border-radius: 2px;
   position: relative;
   box-shadow: inset 0 0 0 0 #910828;
-  transition: box-shadow ease .4s, color ease .4s;
+  transition: box-shadow ease .4s, color ease .4s, border ease .4s;
+  border: none;
 
   &.white {
     background-color: #fff;
     box-shadow: inset 0 0 0 0 #fff;
     color: #121317;
+    border: 1px solid #CCD2D6;
 
     &:hover {
       box-shadow: inset 0 -100px 0 0 #121317;
       color: #fff;
+      border-color: transparent;
 
       &::after {
         content: none;
       }
     }
+  }
+
+  &.grey-border {
+    border: 1px solid #CCD2D6;
+    background-color: transparent;
+    color: #121317;
   }
 
   &.red {
@@ -79,6 +196,163 @@
 
     color: white;
     box-shadow: inset 0 -100px 0 0 #910828;
+    border-color: #910828;
+  }
+}
+
+.ui-fields {
+  margin-bottom: 20px;
+}
+
+.ui-field {
+  position: relative;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ui-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  font-family: "Manrope";
+}
+
+.ui-checkbox a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #910828;
+  font-family: "Manrope";
+}
+
+.ui-checkbox-inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px
+}
+
+.ui-checkbox-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1
+}
+
+.ui-checkbox-label {
+  cursor: pointer
+}
+
+.ui-checkbox-label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CCD2D6;
+  background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color .15s,border .15s
+}
+
+.ui-checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  opacity: 0;
+  transition: opacity .15s,transform .15s
+}
+
+.ui-checkbox-label span {
+  color: #121317;
+  position: relative;
+  top: -0
+}
+
+// .ui-checkbox:hover .ui-checkbox-input+.ui-checkbox-label:before {
+//   border-color: #910828
+// }
+
+.ui-checkbox-input:checked+.ui-checkbox-label::before {
+  border-color: #910828;
+  background-color: #910828
+}
+
+.ui-checkbox-input:checked+.ui-checkbox-label::after {
+  opacity: 1;
+  transform: rotate(-45deg)
+}
+
+.ui-checkbox-input.error+.ui-checkbox-label::before {
+  border-color: #E70510;
+}
+
+.ui-input {
+  height: 55px;
+  width: 100%;
+  border: 1px solid #CCD2D6;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Manrope";
+  color: #121317;
+  border-radius: 4px;
+  padding-left: 20px;
+  outline: none;
+
+  &.active {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 9px;
+  }
+
+  &.error {
+    border-color: #e70510;
+    color: #e70510;
+  }
+}
+
+textarea.ui-input{
+  min-height: 115px;
+  resize: vertical;
+
+  &.active {
+    height: 55px;
+  }
+}
+
+.ui-label {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  pointer-events: none;
+  color: #878B95;
+
+  &.active {
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: -0.03em;
+    top: 8px;
+  }
+
+  &.error {
+    color: #e70510;
   }
 }
 
@@ -108,10 +382,20 @@
   }
 }
 
+.splide__arrows.splide__arrows--ltr {
+  line-height: 0;
+  font-size: 0;
+}
+
 .splide__arrow {
   display: inline-block;
   transform: none;
   position: static;
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .splide__arrow {
@@ -143,4 +427,88 @@
 
 .splide__arrow--next {
   right: auto;
+}
+
+span.error {
+  font-size: 13px;
+  color: #E70510;
+}
+
+@media(max-width: 1520.99px) {
+  .ui-title {
+    font-size: 54px;
+  }
+
+  .ui-padding {
+    padding-top: 98px;
+  }
+}
+
+@media(max-width: 1024.99px) {
+  .ui-title {
+    font-size: 42px;
+  }
+
+  .ui-page {
+    padding: 80px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ui-page-header {
+    padding: 30px 20px;
+  }
+
+  .ui-breadcrumbs {
+    margin-bottom: 20px;
+  }
+
+  .ui-padding {
+    padding-top: 101px;
+  }
+
+  .ui-wrapper {
+    padding: 80px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 745.99px) {
+  .ui-title {
+    font-size: 30px;
+  }
+
+  .ui-interpreter {
+    height: 24px;
+    line-height: 23px;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  .ui-page {
+    padding: 50px 10px;
+  }
+
+  .ui-page-header {
+    padding: 20px 10px;
+  }
+
+  .ui-breadcrumbs {
+    &-link {
+      font-size: 12px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .ui-padding {
+    padding-top: 74px;
+  }
+
+  .ui-wrapper {
+    padding: 50px 10px;
+  }
 }

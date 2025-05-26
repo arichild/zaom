@@ -1,40 +1,58 @@
 <!--#include file="inc-header.html"-->
 
 <div class="middle" id="middle">
-  <div class="container">
-    <div class="main">
-      <div class="main-images">
-        <div class="main-bg">
-          <img src="./images/main-bg.png" alt="">
-        </div>
+  <div class="main">
+    <div class="main-images">
+      <div class="main-bg">
+        <!-- <img src="./images/main-bg.png" alt=""> -->
 
-        <div class="main-text">
-          <img src="./images/zaom-text.svg" alt="">
-        </div>
-
-        <div class="main-bg-up">
-          <img src="./images/main-bg-up.svg" alt="">
-        </div>
+        <picture>
+          <source srcset="./images/main-bg.png" media="(min-width: 1200.99px)">
+          <source srcset="./images/main-bg-2.png" media="(min-width: 520px)">
+          <source srcset="./images/main-bg-3.png" media="(max-width: 519px)">
+          <!-- <source srcset="image-small.jpg" media="(max-width: 767px)"> -->
+          <img src="./images/main-bg.png" alt="Адаптивное изображение">
+        </picture>
       </div>
 
-      <div class="main-info">
-        <h2 class="ui-title">Собственное производство абразивных материалов с доставкой по России и СНГ</h2>
+      <div class="main-text">
+        <img src="./images/zaom-text.svg" alt="">
+      </div>
 
-        <div class="main-block">
-          <div class="main-block-logo">
-            <img src="./images/main-logo.svg" alt="">
-          </div>
+      <div class="main-bg-up">
+        <!-- <img src="./images/main-bg-up.svg" alt=""> -->
 
-          <div class="main-block-txt">
-            <div class="main-block-desc">Промышленные абразивные материалы от производителя</div>
-            <a href="#" class="main-block-link bold">Смотреть каталог</a>
-          </div>
-        </div>
+        <picture>
+          <source srcset="./images/main-bg-up.png" media="(min-width: 1200.99px)">
+          <source srcset="./images/main-bg-up-2.png" media="(min-width: 520px)">
+          <source srcset="./images/main-bg-up-3.png" media="(max-width: 519px)">
+          <!-- <source srcset="image-small.jpg" media="(max-width: 767px)"> -->
+          <img src="./images/main-bg-up.png" alt="Адаптивное изображение">
+        </picture>
       </div>
     </div>
 
+    <div class="main-info">
+      <h2 class="ui-title" data-aos="fade-up">Собственное производство абразивных материалов с доставкой по России и СНГ</h2>
+
+      <div class="main-block" data-aos="fade-up">
+        <div class="main-block-logo">
+          <img src="./images/main-logo.svg" alt="">
+        </div>
+
+        <div class="main-block-txt">
+          <div class="main-block-desc">Промышленные абразивные материалы от производителя</div>
+          <a href="#" class="main-block-link bold">Смотреть каталог</a>
+        </div>
+      </div>
+
+      <a href="#" class="ui-btn red">Смотреть каталог</a>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="category">
-      <div class="category-content">
+      <div class="category-content ui-wrapper" data-aos="fade-up">
         <section class="splide category-slider" aria-label="Basic Structure Example">
           <div class="category-head">
             <h2 class="ui-title">Категории товаров</h2>
@@ -65,13 +83,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Дробь стальная</div>
+                      <a href="#" class="category-card-title">Дробь стальная</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-1.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -80,13 +98,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Дробь чугунная</div>
+                      <a href="#" class="category-card-title">Дробь чугунная</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-2.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -95,13 +113,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Карбид кремния</div>
+                      <a href="#" class="category-card-title">Карбид кремния</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-3.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -110,13 +128,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Дробь стальная</div>
+                      <a href="#" class="category-card-title">Дробь стальная</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-1.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -125,13 +143,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Дробь чугунная</div>
+                      <a href="#" class="category-card-title">Дробь чугунная</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-2.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -140,13 +158,13 @@
                 <div class="category-card">
                   <div class="category-card-content">
                     <div class="category-card-head">
-                      <div class="category-card-title">Карбид кремния</div>
+                      <a href="#" class="category-card-title">Карбид кремния</a>
                       <div class="category-card-count">14 позиций</div>
                     </div>
 
-                    <div class="category-card-img">
+                    <a href="#" class="category-card-img">
                       <img src="./images/category-img-3.png" alt="">
-                    </div>
+                    </a>
                   </div>
                   <a href="#" class="ui-btn red">Перейти в каталог</a>
                 </div>
@@ -159,7 +177,7 @@
 
     <div class="page-wrapper">
       <div class="advantages">
-        <div class="advantages-content">
+        <div class="advantages-content ui-wrapper" data-aos="fade-down">
           <div class="advantages-text">
             <img src="./images/zaom-text.svg" alt="">
           </div>
@@ -216,7 +234,7 @@
       </div>
 
       <div class="trust">
-        <div class="trust-content">
+        <div class="trust-content ui-wrapper" data-aos="fade-up">
           <h2 class="ui-title">Нам доверяют</h2>
 
           <div class="trust-list">
@@ -224,44 +242,44 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-1.svg" alt="">
-                    </a>
+                    <div class="trust-item-block">
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-1.svg" alt="">
+                      </a>
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-5.svg" alt="">
+                      </a>
+                    </div>
                   </li>
                   <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-2.svg" alt="">
-                    </a>
+                    <div class="trust-item-block">
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-2.svg" alt="">
+                      </a>
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-6.svg" alt="">
+                      </a>
+                    </div>
                   </li>
                   <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-3.svg" alt="">
-                    </a>
+                    <div class="trust-item-block">
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-3.svg" alt="">
+                      </a>
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-7.svg" alt="">
+                      </a>
+                    </div>
                   </li>
                   <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-4.svg" alt="">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-5.svg" alt="">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-6.svg" alt="">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-7.svg" alt="">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="trust-item">
-                      <img src="./images/trust-img-8.svg" alt="">
-                    </a>
+                    <div class="trust-item-block">
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-4.svg" alt="">
+                      </a>
+                      <a href="#" class="trust-item">
+                        <img src="./images/trust-img-8.svg" alt="">
+                      </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -270,8 +288,8 @@
         </div>
       </div>
 
-      <div class="popular">
-        <div class="popular-content">
+      <div class="popular" >
+        <div class="popular-content ui-wrapper" data-aos="fade-up">
           <section class="splide popular-slider" aria-label="Basic Structure Example">
             <div class="popular-head">
               <h2 class="ui-title">Популярные товары</h2>

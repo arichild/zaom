@@ -5,13 +5,13 @@
   <meta name="keywords" content="Start-project" />
   <meta name="description" content="Start-project" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
 
   <title>Start-project</title>
 
   <!-- magnific -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,265 @@
   <!-- splide -->
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
+  <!-- jquery form styler -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.css">
+
+   <!-- aos -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- wrapper -->
 <div class="wrapper" id="wrapper">
   <header class="header" id="header">
-    <div class="container">
-      <h1>header</h1>
+    <div class="header-container">
+      <div class="header-top">
+        <div class="header-top-location">
+          <div class="header-top-location-icon">
+            <img src="./images/header-location.svg" alt="">
+          </div>
+
+          <select name="" id="" class="ui-select">
+            <option value="">Нижний Новгород</option>
+            <option value="">Волгоград</option>
+            <option value="">Владивосток</option>
+            <option value="">Екатеринбург</option>
+            <option value="">Казань</option>
+            <option value="">Москва</option>
+            <option value="">Новосибирск</option>
+            <option value="">Санкт-Петербург</option>
+          </select>
+        </div>
+
+        <div class="header-top-logo">
+          <img src="./images/header-logo.svg" alt="">
+        </div>
+
+        <div class="header-top-right">
+          <div class="header-top-phone">+7 343 288-56-12</div>
+          <button class="header-top-burger">
+            <img src="./images/burger-icon.svg" class="open" alt="">
+            <img src="./images/burger-close.svg" class="close" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-logo">
+          <img src="./images/header-logo.svg" alt="">
+        </div>
+
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="catalog">
+              <a href="#" class="btn">
+                Каталог
+
+              </a>
+              <div class="header-nav-control">
+                <img src="./images/nav-open.svg" alt="">
+              </div>
+
+              <ul class="header-nav-1 menu">
+                <li class="close-menu close-category">
+                  <button>
+                    <img src="./images/arrow-back.svg" alt="">
+                  </button>
+                </li>
+                <li>
+                  <a href="#">Электрокорунд</a>
+
+                  <ul class="header-nav-2 menu">
+                    <li class="close-menu">
+                      <button>
+                        <img src="./images/arrow-back.svg" alt="">
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#">Электрокорунд белый</a>
+                    </li>
+                    <li>
+                      <a href="#">Электрокорунд нормальный</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Дробь техническая</a>
+
+                  <ul class="header-nav-2 menu">
+                    <li class="close-menu">
+                      <button>
+                        <img src="./images/arrow-back.svg" alt="">
+                      </button>
+                    </li>
+                    <li>
+                      <a href="#">Дробь стальная</a>
+                    </li>
+                    <li>
+                      <a href="#">Дробь чугунная</a>
+
+                      <ul class="header-nav-3 menu">
+                        <li class="close-menu">
+                          <button>
+                            <img src="./images/arrow-back.svg" alt="">
+                          </button>
+                        </li>
+                        <li>
+                          <a href="#">Дробь чугунная колотая</a>
+                        </li>
+                        <li>
+                          <a href="#">Дробь чугунная литая</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Карбид кремния</a>
+                </li>
+                <li>
+                  <a href="#">Карбид бора</a>
+                </li>
+              </ul>
+            </li>
+            <li class="customers">
+              <a href="#" class="btn">
+                Покупателям
+              </a>
+              <div class="header-nav-control">
+                <img src="./images/nav-open.svg" alt="">
+              </div>
+
+              <ul class="header-nav-1 menu">
+                <li class="close-menu">
+                  <button>
+                    <img src="./images/arrow-back.svg" alt="">
+                  </button>
+                </li>
+                <li>
+                  <a href="#">Компания</a>
+                </li>
+                <li>
+                  <a href="#">Доставка и самовывоз</a>
+                </li>
+                <li>
+                  <a href="#">Отзывы</a>
+                </li>
+              </ul>
+            </li>
+            <li class="contacts">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-search">
+          <div class="header-search-container">
+            <form action="#">
+              <input type="text" placeholder="Поиск">
+              <img src="./images/search-icon.svg" alt="">
+
+              <div class="header-search-result">
+                <div class="header-search-block">
+                  <a href="#" class="header-search-item">Электрокорунд белый f100-200</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый f12-65</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый F45</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый F45</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый F45</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый F45</a>
+                  <a href="#" class="header-search-item">Электрокорунд белый F45</a>
+                </div>
+              </div>
+            </form>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", (event) => {
+                  $(document).ready(function () {
+                    const searchInput = document.querySelector('.header-search input');
+
+                    if (searchInput) {
+                        const searchResult = document.querySelector('.header-search-result')
+                        searchInput.addEventListener('focus', () => {
+                          searchResult.classList.add('active')
+                        });
+
+                        searchInput.addEventListener('blur', () => {
+                          searchResult.classList.remove('active')
+                        });
+                      }
+                  });
+                });
+            </script>
+          </div>
+        </div>
+
+        <div class="header-phone">
+          <div class="header-phone-icon">
+            <img src="./images/phone-icon.svg" alt="">
+          </div>
+
+          <div class="header-phone-txt">
+            <a href="#" class="header-phone-title">+7 343 288-56-12</a>
+            <div class="header-phone-subtitle">Ежедневно с 9:00 до 22:00</div>
+          </div>
+        </div>
+
+        <a href="javascript:void(0)" class="header-call mfp-link" data-href="./popup/call.html">
+          Обратный звонок
+          <img src="./images/call-icon.svg" alt="">
+        </a>
+
+        <div class="header-location">
+          <div class="header-location-icon">
+            <img src="./images/header-location.svg" alt="">
+          </div>
+
+          <select name="" id="" class="header-location-select ui-select">
+            <option value="">Нижний Новгород</option>
+            <option value="">Волгоград</option>
+            <option value="">Владивосток</option>
+            <option value="">Екатеринбург</option>
+            <option value="">Казань</option>
+            <option value="">Москва</option>
+            <option value="">Новосибирск</option>
+            <option value="">Санкт-Петербург</option>
+          </select>
+        </div>
+
+        <button class="header-cart">
+          <img src="./images/header-cart.svg" alt="">
+          <span>5</span>
+        </button>
+
+        <button class="header-burger">
+          <img src="./images/burger-icon.svg" class="open" alt="">
+          <img src="./images/burger-close.svg" class="close" alt="">
+        </button>
+      </div>
+
+      <div class="burger">
+        <div class="burger-back close">
+          <button><img src="./images/arrow-back.svg" alt=""></button>
+        </div>
+
+        <div class="burger-nav">
+          <ul class="burger-nav-list">
+            <li>
+              <a href="#">Покупателям</a>
+              <ul class="burger-menu">
+                <li>
+                  <div class="burger-back back">
+                    <button><img src="./images/arrow-back.svg" alt=""></button>
+                  </div>
+                </li>
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Доставка и самовывоз</a></li>
+                <li><a href="#">Отзывы</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
