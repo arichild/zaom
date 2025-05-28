@@ -1,0 +1,175 @@
+.about {
+	&-page {
+		.main {
+			&-info {
+				margin-bottom: 50px;
+			}
+			.ui-title {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		.category {
+			top: 0;
+			margin-bottom: 0;
+			&-head {
+				margin-bottom: 80px;
+			}
+
+			&-info {
+				&-title {
+					margin-bottom: 50px;
+				}
+			}
+
+			&-block {
+				margin-bottom: 80px;
+
+				&:last-child {
+					max-width: 900px;
+					margin-bottom: 0;
+				}
+			}
+
+			&__center {
+				.ui-title {
+					padding: 0;
+					text-align: center;
+					max-width: 100%;
+				}
+			}
+
+			&__catalog {
+				box-shadow: unset;
+
+				.category-content {
+					background-color: #f3f4f6;
+				}
+
+				.ui-title {
+					max-width: 1240px;
+				}
+			}
+		}
+
+		.popular {
+			&-card {
+				max-width: unset;
+				&-content {
+					max-width: unset;
+				}
+			}
+		}
+
+		.advantages {
+			.ui-title {
+				margin-left: 85.5px;
+				margin-right: 85.5px;
+			}
+		}
+
+		.trust {
+			margin-top: 2px;
+		}
+
+		@media (max-width: 1520.99px) {
+			.main {
+				&-info {
+					margin-bottom: 40px;
+				}
+			}
+
+			.category {
+				&-head {
+					margin-bottom: 50px;
+				}
+				&-info {
+					&-title {
+						font-size: 20px;
+						margin-bottom: 30px;
+					}
+					&-subtitle {
+						font-size: 14px;
+					}
+				}
+
+				&-block {
+					margin-bottom: 50px;
+				}
+			}
+
+			.popular {
+				&-card {
+					&-content {
+						min-height: 350px;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1279.9px) {
+			.main {
+				&-info {
+					margin-bottom: 30px;
+				}
+			}
+
+			.category {
+				&-head {
+					margin-bottom: 30px;
+				}
+				&-info {
+					&-title {
+						margin-bottom: 20px;
+					}
+				}
+				&-content {
+					padding: 80px 20px;
+				}
+			}
+
+			.advantages {
+				.ui-title {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+
+			.popular {
+				&-card {
+					&-content {
+						min-height: 330px;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1200.99px) {
+			.main {
+				&-images {
+					img {
+						object-position: top;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 745.99px) {
+			.category {
+				&-info {
+					&-title {
+						font-size: 18px;
+					}
+				}
+				&-content {
+					padding: 50px 20px;
+				}
+
+				&-block {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
