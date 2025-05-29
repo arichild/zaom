@@ -393,20 +393,39 @@
 			border-radius: 8px;
 
 			.advantages-card {
-				min-height: 460px;
-				padding: 51px 40px;
-				justify-content: flex-start;
+				height: 460px;
+				padding: 10px 40px;
+				justify-content: center;
 
 				&-img {
 					height: 240px;
 					margin-bottom: 22px;
 					display: flex;
 					justify-content: center;
+					align-items: center;
+
+					img {
+						max-height: 163px;
+						max-width: 152px;
+					}
 				}
 
 				&-title {
 					max-width: unset;
-					margin: 0;
+					margin: 0 0 20px;
+					line-height: 1.4;
+					letter-spacing: 0.02em;
+				}
+
+				&-desc {
+					color: #878b95;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 1.3;
+
+					&.white {
+						color: #fff;
+					}
 				}
 
 				&:nth-child(3n) {
@@ -437,19 +456,6 @@
 			text-transform: uppercase;
 			font-weight: 600;
 			font-size: 16px;
-		}
-
-		&-desc {
-			margin-top: 20px;
-
-			color: #878b95;
-			font-weight: 500;
-			font-size: 14px;
-			line-height: 1.3;
-
-			&.white {
-				color: #fff;
-			}
 		}
 
 		&-img {
@@ -785,6 +791,7 @@
 	background-color: #fff;
 	border-radius: 8px;
 	padding: 30px;
+	margin: 0 10px;
 
 	&-block {
 		margin-bottom: 50px;
@@ -795,11 +802,24 @@
 	}
 
 	&-address {
-		max-width: 309px;
-
-		&:last-child {
-			margin-bottom: 0;
+		&-wrapper {
+			max-width: 309px;
 		}
+
+		.information {
+			&-title {
+				margin-bottom: 0;
+			}
+			&-text {
+				&.small {
+					margin: 20px 0 0;
+				}
+			}
+		}
+	}
+
+	&-social {
+		margin-bottom: 50px;
 	}
 
 	&-details {
@@ -807,12 +827,12 @@
 	}
 
 	&-phones {
-		display: flex;
-		align-items: center;
-		gap: 57px;
-
 		.information-title {
 			margin-bottom: 0;
+
+			&:not(:last-child) {
+				margin-right: 57px;
+			}
 		}
 	}
 
@@ -838,17 +858,35 @@
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 1.3;
+		letter-spacing: 0;
 		text-transform: uppercase;
 		margin-bottom: 20px;
 
 		&.big {
 			font-size: 60px;
-			line-height: 1;
-			letter-spacing: -2%;
+			line-height: 1.1;
+			letter-spacing: -0.02em;
 		}
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		&.link {
+			&:hover::after {
+				width: 100%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -4px;
+				width: 0;
+				height: 3px;
+				background-color: #121317;
+				transition: width 0.4s;
+			}
 		}
 	}
 
@@ -857,11 +895,9 @@
 		font-size: 18px;
 		line-height: 1.3;
 		margin-bottom: 20px;
+		letter-spacing: 0;
 
 		p {
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 1.3;
 			margin-bottom: 0;
 		}
 
@@ -960,12 +996,6 @@
 					}
 				}
 			}
-
-			&-grid {
-				.advantages-card {
-					padding: 51px 40px;
-				}
-			}
 		}
 	}
 
@@ -1054,12 +1084,40 @@
 	.information {
 		&-address {
 			margin-bottom: 30px;
+			&:nth-last-child(-n + 2) {
+				margin-bottom: 0;
+			}
+		}
+
+		&-block {
+			&__social {
+				margin-bottom: 30px;
+			}
+		}
+
+		&-details {
+			max-width: 728px;
+		}
+
+		&-social {
+			margin-bottom: 50px;
+			.information-block {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		&-phones {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 30px;
+			.information-title {
+				display: block;
+				width: fit-content;
+				&:not(:last-child) {
+					margin-right: 0;
+					margin-bottom: 30px;
+				}
+			}
 		}
 
 		&-map {
@@ -1075,9 +1133,6 @@
 
 		&-text {
 			font-size: 14px;
-			p {
-				font-size: 14px;
-			}
 		}
 	}
 }
@@ -1254,17 +1309,25 @@
 
 			&-grid {
 				.advantages-card {
-					min-height: 305px;
-					padding: 31.5px 40px;
+					height: 305px;
 
 					&-img {
 						img {
 							max-width: 76px;
+							max-height: 82px;
 						}
 					}
 
-					&-desc {
+					&-info {
 						max-width: 162px;
+						margin: 0 auto;
+					}
+
+					&-desc {
+						font-size: 10px;
+						font-weight: 400;
+						line-height: 1;
+						letter-spacing: -0.03em;
 					}
 
 					&-img {
@@ -1281,10 +1344,6 @@
 				font-size: 12px;
 				max-width: 145px;
 				margin: 0 auto;
-			}
-
-			&-desc {
-				font-size: 10px;
 			}
 		}
 	}
@@ -1344,6 +1403,11 @@
 				font-size: 20px;
 			}
 		}
+	}
+
+	.information {
+		padding: 30px 20px;
+		margin: 0;
 	}
 }
 
@@ -1539,14 +1603,14 @@
 
 			&-grid {
 				.advantages-card {
-					min-height: 255px;
-					padding: 33.5px 20px;
+					height: 255px;
+					padding: 10px 20px;
 
 					&-img {
 						margin-bottom: 10px;
 					}
-					&-desc {
-						max-width: unset;
+					&-info {
+						max-width: 315px;
 					}
 				}
 			}
@@ -1680,18 +1744,36 @@
 		padding: 20px 10px;
 
 		&-address {
-			max-width: unset;
 			margin-bottom: 20px;
 
-			.information-title {
-				margin-bottom: 10px;
+			.information-text {
+				&.small {
+					margin: 10px 0 0;
+				}
+			}
+
+			&-wrapper {
+				max-width: 334px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 		&-phones {
-			gap: 20px;
+			.information-title {
+				&:not(:last-child) {
+					margin: 0 0 20px;
+				}
+			}
+		}
+
+		&-social {
+			margin-bottom: 30px;
 		}
 
 		&-map {
+			margin-bottom: 30px;
 			&-source {
 				height: 360px;
 				> * {
@@ -1703,9 +1785,7 @@
 		&-details {
 			.information-text {
 				font-size: 18px;
-				p {
-					font-size: 18px;
-				}
+				margin-bottom: 20px;
 			}
 		}
 
