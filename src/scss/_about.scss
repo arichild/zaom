@@ -1,11 +1,33 @@
 .about {
 	&-page {
-		&-info {
+		&__info {
+			position: relative;
+			z-index: 4;
+			box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.35);
+			top: 0;
+			margin-bottom: 0;
+
 			.ui-title {
 				padding: 0;
 				text-align: center;
 				max-width: 1240px;
 				margin: 0 auto;
+			}
+
+			&-content {
+				background-color: #fff;
+				border-radius: 8px;
+			}
+
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
 			}
 		}
 
@@ -83,13 +105,26 @@
 
 		.main {
 			&-info {
+				display: block;
+				max-width: 890px;
+
+				padding: 0;
+				margin: 0 0 0 40px;
+
 				bottom: 50px;
-				margin-bottom: 150px;
+				left: calc((100vw - 1600px) / 2);
+
+				color: #fff;
+
+				transform: translate(0, 50%);
+				&:not([data-aos]) {
+					transform: none;
+				}
 			}
-			.ui-title {
+			/* .ui-title {
 				padding: 0;
 				margin: 0;
-			}
+			} */
 		}
 
 		.advantages {
@@ -104,11 +139,21 @@
 			margin-top: 2px;
 		}
 
+		@media (max-width: 1599.99px) {
+			.main {
+				&-info {
+					left: 0;
+				}
+			}
+		}
+
 		@media (max-width: 1520.99px) {
 			.main {
 				&-info {
 					bottom: 40px;
-					margin-bottom: 83px;
+				}
+				&-text {
+					top: 136px;
 				}
 			}
 
@@ -228,10 +273,12 @@
 
 			.main {
 				&-info {
-					margin-bottom: 72px;
-					.ui-title {
-						max-width: 537px;
-					}
+					margin: 0;
+					padding: 0 10px 0 20px;
+					max-width: 567px;
+				}
+				&-text {
+					top: 128px;
 				}
 			}
 
@@ -249,10 +296,10 @@
 		@media (max-width: 745.99px) {
 			.main {
 				&-info {
-					margin-bottom: 38px;
-					.ui-title {
-						max-width: 345px;
-					}
+					max-width: 375px;
+				}
+				&-text {
+					top: 116px;
 				}
 			}
 
