@@ -11,11 +11,12 @@
 
 /* pages */
 @import 'index';
+@import 'catalog';
 @import 'category';
+@import 'subcategory';
 @import 'about';
 @import 'contacts';
 @import 'delivery';
-@import 'catalog';
 
 * {
 	box-sizing: border-box;
