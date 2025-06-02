@@ -936,6 +936,73 @@
 	}
 }
 
+.shop {
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 8px;
+	margin: 0 10px;
+
+	&-card {
+		position: relative;
+		padding: 30px;
+
+		height: 430px;
+
+		border: 1px solid #ccd2d6;
+		border-radius: 8px;
+		background-color: #f3f4f6;
+
+		&-title {
+			position: relative;
+			z-index: 1;
+			font-family: Oswald;
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 1.1;
+			letter-spacing: 0%;
+			text-transform: uppercase;
+		}
+
+		&-img {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+
+			img {
+				position: relative;
+				z-index: 0;
+
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: right bottom;
+			}
+		}
+
+		.ui-btn {
+			position: absolute;
+			bottom: 30px;
+			width: calc(100% - 60px);
+			left: 30px;
+			opacity: 0;
+			letter-spacing: 0;
+			transform: translateY(20px);
+			transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s, color 0.4s,
+				-webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+		}
+
+		&:hover {
+			.ui-btn {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
 @media (max-width: 1520.99px) {
 	.popular {
 		.splide__arrows.splide__arrows--ltr {
@@ -1087,6 +1154,28 @@
 			}
 		}
 	}
+
+	.shop {
+		&-card {
+			padding: 20px;
+			height: 350px;
+
+			&-title {
+				font-size: 24px;
+			}
+
+			.ui-btn {
+				font-size: 14px;
+				line-height: 57px;
+
+				bottom: 20px;
+				left: 20px;
+
+				height: 57px;
+				width: calc(100% - 40px);
+			}
+		}
+	}
 }
 
 @media (max-width: 1200px) {
@@ -1160,6 +1249,19 @@
 
 		&-text {
 			font-size: 14px;
+		}
+	}
+
+	.shop {
+		&-card {
+			height: 330px;
+
+			&-block {
+				margin-bottom: 8px;
+				&:nth-last-child(-n + 2) {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
@@ -1441,6 +1543,11 @@
 				padding-left: 20px;
 			}
 		}
+	}
+
+	.shop {
+		padding: 20px;
+		margin: 0;
 	}
 }
 
@@ -1835,6 +1942,26 @@
 
 		&-text {
 			margin-bottom: 10px;
+		}
+	}
+
+	.shop {
+		padding: 10px;
+
+		&-card {
+			height: 220px;
+
+			&-block {
+				margin-bottom: 8px;
+
+				&:nth-last-child(-n + 2) {
+					margin-bottom: 8px;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
