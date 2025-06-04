@@ -1,0 +1,34 @@
+.privacy {
+	&-page {
+		margin-bottom: 2px;
+
+		.information {
+			padding: 50px 30px;
+			&-content {
+				max-width: 900px;
+			}
+		}
+
+		@media (max-width: 1520.99px) {
+			.information {
+				padding: 30px;
+			}
+		}
+
+		@media (max-width: 1024.99px) {
+			.information {
+				padding: 30px 20px;
+			}
+		}
+
+		@media (max-width: 745.99px) {
+			.ui-breadcrumbs-link {
+				padding-right: 24px;
+			}
+
+			.information {
+				padding: 20px 10px;
+			}
+		}
+	}
+}
