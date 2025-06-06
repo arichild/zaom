@@ -1,0 +1,60 @@
+.thanks {
+	&-page {
+		.response {
+			&-wrapper {
+				display: flex;
+				flex-direction: column;
+			}
+			&-info {
+				margin: auto;
+				transform: translateY(-23px);
+				max-width: 737px;
+			}
+
+			&-title {
+				margin-bottom: 30px;
+			}
+
+			&-subtitle {
+				margin-bottom: 27px;
+			}
+		}
+
+		@media (max-width: 1520.99px) {
+			.response {
+				&-info {
+				}
+			}
+		}
+
+		@media (max-width: 1024.99px) {
+			.response {
+				&-subtitle {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		@media (max-width: 745.99px) {
+			.response {
+				&-header {
+					&-logo {
+						margin-left: 5px;
+					}
+				}
+
+				&-wrapper {
+					padding: 20px 15px;
+				}
+
+				&-info {
+					max-width: 671px;
+				}
+
+				&-title {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}

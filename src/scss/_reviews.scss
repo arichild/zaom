@@ -1,0 +1,170 @@
+.reviews {
+	padding: 110px 30px;
+	margin: 0 10px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.35);
+
+	position: relative;
+	z-index: 4;
+
+	&-page {
+	}
+
+	&-grid {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		border: 1px solid #ccd2d6;
+		border-radius: 8px;
+		margin-bottom: 30px;
+	}
+
+	&-item {
+		width: 25%;
+		height: 370px;
+		padding: 54px 10px;
+		flex: 0 0 25%;
+
+		border-right: 1px solid #ccd2d6;
+		border-bottom: 1px solid #ccd2d6;
+
+		&-image {
+			max-width: 185px;
+			margin: 0 auto;
+			line-height: 0;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		@media (min-width: 1025px) {
+			&:nth-child(4n) {
+				border-right: none;
+			}
+
+			&:nth-last-child(-n + 4) {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&-popup {
+		height: calc(100vh - 64px);
+		margin-top: 64px;
+
+		&-image {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			max-width: 1580px;
+			max-height: 664px;
+			object-fit: scale-down;
+		}
+
+		.mfp-close {
+			height: 46px;
+			width: 46px;
+			right: 40px;
+			top: 40px;
+
+			background-color: #fff;
+
+			&:active {
+				top: 40px !important;
+			}
+		}
+	}
+
+	@media (max-width: 1520.99px) {
+		&-popup {
+			height: calc(100vh - 98px);
+			margin-top: 98px;
+
+			&-image {
+				max-height: 60vh;
+			}
+		}
+
+		&-page {
+			.advantages {
+				.advantages-text,
+				.ui-title {
+					margin-bottom: 80px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024.99px) {
+		padding: 80px 30px;
+		margin: 0 0 -40px;
+
+		&-item {
+			width: 50%;
+			flex: 0 0 50%;
+
+			border-right: 1px solid #ccd2d6;
+			border-bottom: 1px solid #ccd2d6;
+
+			&:nth-child(2n) {
+				border-right: none;
+			}
+
+			&:nth-last-child(-n + 2) {
+				border-bottom: none;
+			}
+		}
+
+		&-page {
+			.advantages {
+				.advantages-text,
+				.ui-title {
+					margin-bottom: 30px;
+				}
+
+				&-body {
+					&-title {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 745.99px) {
+		padding: 20px 10px;
+		margin: 0 0 -20px;
+
+		&-item {
+			padding: 20px 40px;
+			height: auto;
+
+			&-img {
+				width: 100%;
+			}
+		}
+
+		&-popup {
+			height: calc(100vh - 74px);
+			margin-top: 74px;
+
+			&-image {
+				max-height: 396px;
+			}
+
+			.mfp-close {
+				right: 20px;
+				top: 20px;
+
+				&:active {
+					top: 20px !important;
+				}
+			}
+		}
+	}
+}

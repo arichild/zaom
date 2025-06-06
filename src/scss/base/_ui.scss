@@ -211,6 +211,13 @@
 		}
 	}
 
+	&.hover-white {
+		&:hover {
+			color: #121317;
+			box-shadow: inset 0 -100px 0 0 #fff;
+		}
+	}
+
 	&:hover {
 		&::after {
 			content: none;
