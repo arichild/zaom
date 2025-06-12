@@ -6,6 +6,7 @@
 				flex-direction: column;
 			}
 			&-info {
+				padding: 0;
 				margin: auto;
 				transform: translateY(-23px);
 				max-width: 737px;
@@ -44,7 +45,7 @@
 				}
 
 				&-wrapper {
-					padding: 20px 15px;
+					padding: 0 15px 20px;
 				}
 
 				&-info {

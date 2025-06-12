@@ -125,6 +125,17 @@
 				padding: 0;
 				margin: 0;
 			} */
+
+			&-bg {
+				img {
+					max-height: calc(100vh - 66px);
+				}
+				&-up {
+					img {
+						max-height: calc(100vh - 66px);
+					}
+				}
+			}
 		}
 
 		.advantages {
@@ -154,6 +165,16 @@
 				}
 				&-text {
 					top: 136px;
+				}
+				&-bg {
+					img {
+						max-height: calc(100vh - 98px);
+					}
+					&-up {
+						img {
+							max-height: calc(100vh - 98px);
+						}
+					}
 				}
 			}
 
@@ -231,6 +252,16 @@
 						object-position: top;
 					}
 				}
+				&-bg {
+					img {
+						max-height: calc(100vh - 101px);
+					}
+					&-up {
+						img {
+							max-height: calc(100vh - 101px);
+						}
+					}
+				}
 			}
 		}
 
@@ -300,6 +331,16 @@
 				}
 				&-text {
 					top: 116px;
+				}
+				&-bg {
+					img {
+						max-height: calc(100vh - 74px);
+					}
+					&-up {
+						img {
+							max-height: calc(100vh - 74px);
+						}
+					}
 				}
 			}
 
