@@ -521,4 +521,20 @@ $(document).ready(function () {
 			btnView1.classList.remove('active')
 		})
 	}
+
+	const cookies = document.querySelector('.cookies')
+	const cookiesBtn = document.getElementById('cookies-btn')
+	const isShowedCookies = localStorage.getItem('isShowedCookies')
+	if (cookies) {
+		if (!isShowedCookies) cookies.classList.add('active')
+
+		if (cookiesBtn) {
+			cookiesBtn.addEventListener('click', e => {
+				e.preventDefault()
+				cookies.style.opacity = 0
+				setTimeout(() => cookies.classList.remove('active'), 400)
+				localStorage.setItem('isShowedCookies', 1)
+			})
+		}
+	}
 })
